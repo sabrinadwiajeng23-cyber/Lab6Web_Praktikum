@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum DOM dan Event Handling</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <h1>Praktikum JavaScript DOM dan Event Handling</h1>
+    <p>Latihan DOM, event, validasi form, dan mini project workshop.</p>
+  </header>
+
+  <main class="container">
+    <section class="panel">
+      <h2>Latihan 1 — Mengubah teks dengan DOM</h2>
+      <h3 id="judul">Latihan DOM</h3>
+      <p id="pesan">Belum ada tindakan.</p>
+      <button id="tombolAksi" type="button">Klik Saya</button>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 2 — Event click</h2>
+      <p id="pesanKlik">Klik tombol untuk melihat waktu tindakan.</p>
+      <button id="tombolKlik" type="button">Tampilkan waktu</button>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 3 — Mengubah kelas dan gaya CSS</h2>
+      <p id="teksGaya">Klik tombol untuk mengubah tampilan paragraf ini.</p>
+      <button id="tombolGaya" type="button">Ubah gaya</button>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 4 — Event input dan penghitung karakter</h2>
+      <label for="namaInput">Ketik teks:</label>
+      <input id="namaInput" type="text" maxlength="40" placeholder="Tulis sesuatu...">
+      <p>Jumlah karakter: <strong id="jumlahKarakter">0</strong>/40</p>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 5 — Validasi form pendaftaran</h2>
+      <form id="formPendaftaran" novalidate>
+        <label for="nama">Nama lengkap</label>
+        <input id="nama" name="nama" type="text" placeholder="Minimal 3 karakter">
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="contoh@email.com">
+
+        <label for="usia">Usia</label>
+        <input id="usia" name="usia" type="number" min="17" max="100" placeholder="17–100">
+
+        <div class="button-row">
+          <button type="submit">Daftar</button>
+          <button type="reset" class="secondary">Reset</button>
+        </div>
+      </form>
+      <p id="pesanForm" class="feedback" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Latihan 6 — Daftar tugas sederhana (To-do List)</h2>
+      <label for="inputTugas">Tugas baru</label>
+      <div class="input-row">
+        <input id="inputTugas" type="text" placeholder="Masukkan tugas...">
+        <button id="tambahTugas" type="button">Tambah</button>
+      </div>
+      <p id="pesanTugas" class="feedback" aria-live="polite"></p>
+      <ul id="daftarTugas"></ul>
+    </section>
+
+    <section class="panel workshop">
+      <h2>Mini Project — Form Pendaftaran Workshop</h2>
+      <p>Isi data berikut untuk mendaftar workshop.</p>
+      <form id="formWorkshop" novalidate>
+        <label for="namaWorkshop">Nama lengkap</label>
+        <input id="namaWorkshop" name="namaWorkshop" type="text" placeholder="Minimal 3 karakter">
+        <p class="hint">Jumlah karakter nama: <strong id="hitungNama">0</strong></p>
+
+        <label for="emailWorkshop">Email</label>
+        <input id="emailWorkshop" name="emailWorkshop" type="email" placeholder="contoh@email.com">
+
+        <label for="sesiWorkshop">Pilih sesi workshop</label>
+        <select id="sesiWorkshop" name="sesiWorkshop">
+          <option value="">-- Pilih sesi --</option>
+          <option value="Sesi pagi (09.00–11.00)">Sesi pagi (09.00–11.00)</option>
+          <option value="Sesi siang (13.00–15.00)">Sesi siang (13.00–15.00)</option>
+          <option value="Sesi sore (15.30–17.30)">Sesi sore (15.30–17.30)</option>
+        </select>
+        <p id="infoSesi" class="hint">Sesi yang dipilih: belum dipilih.</p>
+
+        <div class="button-row">
+          <button type="submit">Kirim pendaftaran</button>
+          <button type="reset" class="secondary">Hapus input</button>
+        </div>
+      </form>
+      <p id="pesanWorkshop" class="feedback" aria-live="polite"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Eksperimen Mandiri 4 — Tampilkan/sembunyikan paragraf</h2>
+      <p id="paragrafEksperimen">Paragraf ini dapat disembunyikan dan ditampilkan kembali menggunakan class CSS.</p>
+      <button id="toggleParagraf" type="button">Sembunyikan paragraf</button>
+    </section>
+  </main>
+
+  <footer>Praktikum Pemrograman Web — JavaScript DOM dan Event Handling</footer>
+</body>
+</html>
